@@ -32,20 +32,19 @@ taskInput.addEventListener('keyup', (e) => {
 //   alert("Hey");
 // });
 
-tasks.addEventListener('click', (event) => {
-  if (event.target.tagName == 'svg') {
-    if (event.target.className == 'delete') {
-      let li = event.target.parentNode.parentNode;
-      let ul = li.parentNode;
-      ul.removeChild(li);
-    } else if (event.target.className == 'bin') {
-      let li = event.target.parentNode.parentNode.parentNode;
-      let ul = li.parentNode;
-      ul.removeChild(li);
-    } else if ((event.target.className == 'cap') || (event.target.className == 'can')) {
-      let li = event.target.parentNode.parentNode.parentNode.parentNode;
-      let ul = li.parentNode;
-      ul.removeChild(li);
-    }
+document.addEventListener('click', function(event){
+  if (event.target.className["baseVal"] == 'delete') {
+    let li = event.target.parentNode.parentNode;
+    let ul = li.parentNode;
+    ul.removeChild(li);
+  } else if (event.target.className["baseVal"] == 'bin') {
+    let li = event.target.parentNode.parentNode.parentNode;
+    let ul = li.parentNode;
+    ul.removeChild(li);
+  } else if ((event.target.className["baseVal"] == 'cap') || (event.target.className["baseVal"] == 'can')) {
+    let li = event.target.parentNode.parentNode.parentNode.parentNode;
+    let ul = li.parentNode;
+    ul.removeChild(li);
   }
+
 });
