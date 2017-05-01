@@ -23,7 +23,7 @@ taskInput.addEventListener('keyup', (e) => {
 
 	  li.textContent = task.value;
     attachButton(li);
-	  ul.appendChild(li);
+	  ul.prepend(li);
 	  task.value = '';
 	}
 });
